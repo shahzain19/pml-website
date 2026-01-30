@@ -1,0 +1,31 @@
+{
+  "routes": [
+    {
+      "src": "/docs",
+      "dest": "/docs.html"
+    },
+    {
+      "src": "/changelog",
+      "dest": "/changelog.html"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    }
+  ]
+}
